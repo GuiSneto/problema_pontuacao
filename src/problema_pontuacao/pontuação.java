@@ -19,7 +19,7 @@ public class pontuação {
 
 		
 		// Declaração das variaveis
-		int VOLUMEC,ATRPAG,SCOREVOLUMEC = 0,SCOREINAD = 0, SCOREPAG = 0;
+		int VOLUMEC,ATRPAG,SCOREVOLUMEC = 0,SCOREINAD = 0, SCOREPAG = 0, RESULTADOFINAL;
 		double TICKETM;
 		char FORMPAG;
 		
@@ -89,9 +89,22 @@ public class pontuação {
 		}
 		
 		System.out.println("Score de forma de pagamento = " + SCOREPAG + " pontos");
+		System.out.println("");
 		
 		
+		//calculo final
 		
+		RESULTADOFINAL = SCOREPAG + SCOREINAD + SCOREVOLUMEC;
+		
+		if (RESULTADOFINAL <= 25) {
+			System.out.println("Classificação final =  CLIENTE BRONZE");
+		}
+		else if (RESULTADOFINAL > 25 && RESULTADOFINAL <= 75) {
+			System.out.println("Classificação final =  CLIENTE PRATA");
+		}
+		else if (RESULTADOFINAL > 75) {
+			System.out.println("Classificação final =  CLIENTE OURO");
+		}
 		
 		
 		
